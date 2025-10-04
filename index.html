@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【即戦力化】DXスタートプラン | 株式会社Gen AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+            background-color: #f8fafc;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        .flow-step {
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding: 1rem;
+            background-color: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            border: 1px solid #E5E7EB;
+            min-height: 80px;
+        }
+        .flow-connector {
+            width: 2px;
+            background-color: #3E92CC;
+            height: 2rem;
+            margin: 0.5rem auto;
+        }
+        .flow-connector::after {
+            content: '▼';
+            display: block;
+            text-align: center;
+            color: #3E92CC;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-gray-800">
+
+    <header class="bg-[#0A2463] text-white text-center p-8 md:p-12">
+        <h1 class="text-3xl md:text-5xl font-bold mb-2">生成AIを「戦力」にする</h1>
+        <h2 class="text-xl md:text-3xl font-extrabold text-[#3E92CC] border-b-2 border-[#3E92CC] inline-block pb-1">DXスタートプラン</h2>
+        <p class="mt-4 max-w-2xl mx-auto">無課金、ミニマルコストでAIを最大活用する、株式会社Gen AIの実践プログラム</p>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+        <section id="bottlenecks" class="my-12">
+            <h3 class="text-2xl md:text-3xl font-bold text-center mb-8 text-[#0A2463]">多くの企業が直面する、AI活用のボトルネック</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="text-5xl mb-4">💰</div>
+                    <h4 class="text-xl font-bold mb-2">高コスト</h4>
+                    <p class="text-gray-600">有料ツールや大規模なシステム導入には、多額の初期投資とランニングコストが必要です。</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="text-5xl mb-4">❓</div>
+                    <h4 class="text-xl font-bold mb-2">ROIの不確実性</h4>
+                    <p class="text-gray-600">導入効果が不明確で、投資対効果（ROI）を算出できず、導入に踏み切れません。</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="text-5xl mb-4">🤯</div>
+                    <h4 class="text-xl font-bold mb-2">選択肢の多さ</h4>
+                    <p class="text-gray-600">多数のAIモデルやツールが存在し、自社に最適な選択肢を見極めることが困難です。</p>
+                </div>
+            </div>
+             <div class="mt-12 bg-white p-6 rounded-lg shadow-lg">
+                <p class="text-center text-gray-700 mb-4">これらの課題は、AI導入を検討する企業の約8割が共通して抱える悩みです。DXスタートプランは、これらの障壁を乗り越えるための具体的な解決策を提供します。</p>
+                <div class="chart-container h-[300px] md:h-[350px]">
+                    <canvas id="bottleneckChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section id="solution" class="my-16 text-center bg-[#3E92CC] text-white p-10 rounded-lg shadow-xl">
+            <h3 class="text-2xl md:text-4xl font-bold mb-4">その課題、「DXスタートプラン」が解決します</h3>
+            <p class="text-lg md:text-xl mb-6">高額な投資は不要。現場の生産性を劇的に向上させる実践スキルを習得します。</p>
+            <div class="bg-white text-[#0A2463] rounded-lg p-8 inline-flex flex-col items-center shadow-inner">
+                <p class="text-lg">資料作成・ルーティンワーク時間を</p>
+                <div class="text-7xl md:text-9xl font-bold my-2">
+                    <span class="align-super text-4xl md:text-6xl">1</span><span class="mx-1">/</span><span class="">10</span>
+                </div>
+                <p class="text-lg font-bold">に短縮し、高品質な成果を創出</p>
+            </div>
+        </section>
+
+        <section id="curriculum" class="my-16">
+            <h3 class="text-2xl md:text-3xl font-bold text-center mb-8 text-[#0A2463]">全3回のオンライン講義+コンサルティングで学ぶカリキュラム</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-[#3E92CC]">
+                    <h4 class="text-xl font-bold mb-2">🎓 セクション1：生成AI入門</h4>
+                    <p class="text-gray-600">AI活用の羅針盤と安全基準を確立。ビジネスの未来展望から、著作権などの法的リスク、ハルシネーション対策まで、基礎を体系的に学びます。</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-[#3E92CC]">
+                    <h4 class="text-xl font-bold mb-2">📝 セクション2：AIテキスティング</h4>
+                    <p class="text-gray-600">SEOと実践的ケーススタディを交え、ビジネス効果を最大化する文書作成の基礎から応用までを習得。プロンプトエンジニアリングの原則に基づき、資料作成や社内文書といったルーティンワークを高品質かつ高速に処理します。</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-[#3E92CC]">
+                    <h4 class="text-xl font-bold mb-2">📊 セクション3：資料作成と応用</h4>
+                    <p class="text-gray-600">複数AIを連携させた資料作成ワークフローを実践。GA4のデータ分析と組み合わせ、ルーティンワークをデータドリブンで効率化します。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="deep-dive" class="my-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <h4 class="text-xl md:text-2xl font-bold mb-4 text-[#0A2463]">主要生成AIの比較</h4>
+                <p class="text-gray-600 mb-6">当講座では、主要なAIモデルの特性を比較分析し、用途に応じた最適なツール選定スキルを養います。以下はあくまで一例ですが、コスト、品質、応答速度などの観点から評価します。</p>
+                <div class="chart-container h-[350px]">
+                    <canvas id="aiComparisonChart"></canvas>
+                </div>
+            </div>
+             <div class="bg-white p-8 rounded-lg shadow-lg">
+                <h4 class="text-xl md:text-2xl font-bold mb-4 text-[#0A2463]">AIテキスティング：10ステップのライティングプロセス</h4>
+                <p class="text-gray-600 mb-4">この体系化されたプロセスにより、誰でも高品質な文書を効率的に作成可能になります。SEO戦略の基礎と、実践的ケーススタディを交えながら解説します。</p>
+                <div class="space-y-2">
+                    <div class="flow-step"><span class="font-bold text-[#3E92CC] mr-4">1.</span>キーワード設定</div>
+                    <div class="flow-connector"></div>
+                    <div class="flow-step"><span class="font-bold text-[#3E92CC] mr-4">2.</span>サジェスト調査</div>
+                    <div class="flow-connector"></div>
+                    <div class="flow-step"><span class="font-bold text-[#3E92CC] mr-4">3.</span>ペルソナ分析</div>
+                    <div class="flow-connector"></div>
+                    <div class="flow-step"><span class="font-bold text-[#3E92CC] mr-4">4.</span>AIへの段階的プロンプト実行</div>
+                    <div class="flow-connector"></div>
+                    <div class="flow-step"><span class="font-bold text-[#3E92CC] mr-4">5.</span>人間による校正・ファクトチェック</div>
+                </div>
+                 <p class="text-sm text-gray-500 mt-4">※講座では全10ステップを詳細に解説します。</p>
+            </div>
+             <div class="bg-white p-8 rounded-lg shadow-lg lg:col-span-2">
+                <h4 class="text-xl md:text-2xl font-bold mb-4 text-[#0A2463]">資料作成とマーケティング応用：高速ワークフロー</h4>
+                <p class="text-gray-600 mb-6">複数のAI機能を独自に連携させ、企画、情報整理、ビジュアル化、最終出力までを高速かつ高品質に行う独自の高速ワークフローです。</p>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-center">
+                    <div class="flow-step flex-col h-full"><span class="font-bold text-2xl text-[#3E92CC]">1</span><p class="mt-2">AIによる企画・構成の自動生成</p></div>
+                    <div class="flow-step flex-col h-full"><span class="font-bold text-2xl text-[#3E92CC]">2</span><p class="mt-2">ビジュアル素材の高速・高精度出力</p></div>
+                    <div class="flow-step flex-col h-full"><span class="font-bold text-2xl text-[#3E92CC]">3</span><p class="mt-2">出力データの柔軟な形式調整</p></div>
+                    <div class="flow-step flex-col h-full"><span class="font-bold text-2xl text-[#3E92CC]">4</span><p class="mt-2">最終成果物へのシームレスな変換</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="roi" class="my-16">
+            <h3 class="text-2xl md:text-3xl font-bold text-center mb-8 text-[#0A2463]">期待される成果とROI</h3>
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <p class="text-gray-600 mb-6 text-center">本プランの導入により、資料作成やルーティンワークのプロセスは劇的に変化します。企画から完成までの時間を大幅に短縮し、より戦略的な業務にリソースを集中させることが可能になります。</p>
+                <div class="chart-container h-[400px] md:h-[450px]">
+                    <canvas id="roiChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-[#0A2463] text-white text-center p-8 mt-12">
+        <p class="text-xl font-bold">株式会社Gen AI</p>
+        <p class="mt-2">AIを使いこなす人材を育成し、持続的な生産性向上を実現します。</p>
+        <p class="mt-4">
+            お問い合わせ: 
+            <a href="https://lin.ee/ColWYJw" target="_blank" class="text-[#60A5FA] hover:text-white underline transition duration-300">弊社公式LINE</a>
+        </p>
+        <p class="mt-2">
+            <a href="https://genai-jp.github.io/official/#hom/%E3%83%93%E3%82%B8%E3%83%A7%E3%83%B3" target="_blank" class="text-[#60A5FA] hover:text-white underline transition duration-300">公式ホームページ</a>
+        </p>
+        <p class="text-xs opacity-60 mt-6">© 2025 Gen AI Co., Ltd. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const brilliantBlues = {
+            dark: '#0A2463',
+            medium: '#3E92CC',
+            light: '#60A5FA',
+            gray: '#D8D8D8',
+            white: '#FFFFFF',
+            text: '#1E1B18'
+        };
+
+        const chartTooltipCallback = {
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        title: function(tooltipItems) {
+                            const item = tooltipItems[0];
+                            let label = item.chart.data.labels[item.dataIndex];
+                            if (Array.isArray(label)) {
+                              return label.join(' ');
+                            } else {
+                              return label;
+                            }
+                        }
+                    }
+                },
+                legend: {
+                    position: 'top',
+                },
+            }
+        };
+
+        function wrapLabels(label, maxLength = 16) {
+            if (label.length <= maxLength) {
+                return label;
+            }
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            words.forEach(word => {
+                if ((currentLine + word).length > maxLength) {
+                    lines.push(currentLine.trim());
+                    currentLine = '';
+                }
+                currentLine += word + ' ';
+            });
+            lines.push(currentLine.trim());
+            return lines;
+        }
+
+
+        const bottleneckCtx = document.getElementById('bottleneckChart');
+        if (bottleneckCtx) {
+            new Chart(bottleneckCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['高コスト', 'ROIの不確実性', '選択肢の多さ'],
+                    datasets: [{
+                        label: 'AI導入の障壁',
+                        data: [35, 35, 30],
+                        backgroundColor: [
+                            brilliantBlues.medium,
+                            brilliantBlues.light,
+                            brilliantBlues.gray
+                        ],
+                        borderColor: brilliantBlues.white,
+                        borderWidth: 4,
+                        hoverOffset: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        ...chartTooltipCallback.plugins,
+                         title: {
+                            display: true,
+                            text: 'AI導入における課題の内訳',
+                            font: { size: 16 }
+                        }
+                    }
+                }
+            });
+        }
+        
+        const aiComparisonCtx = document.getElementById('aiComparisonChart');
+        if (aiComparisonCtx) {
+            new Chart(aiComparisonCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['ChatGPT', 'Gemini', 'その他'],
+                    datasets: [
+                        {
+                            label: 'コストパフォーマンス',
+                            data: [75, 90, 60],
+                            backgroundColor: brilliantBlues.medium,
+                            borderColor: brilliantBlues.dark,
+                            borderWidth: 1
+                        },
+                        {
+                            label: 'テキスト品質',
+                            data: [85, 80, 70],
+                             backgroundColor: brilliantBlues.light,
+                            borderColor: brilliantBlues.dark,
+                            borderWidth: 1
+                        },
+                        {
+                            label: '多機能性',
+                            data: [70, 85, 75],
+                             backgroundColor: brilliantBlues.gray,
+                            borderColor: brilliantBlues.dark,
+                            borderWidth: 1
+                        }
+                    ]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                         x: {
+                            stacked: true,
+                             ticks: { display: false },
+                             grid: { display: false },
+                             border: { display: false }
+                        },
+                        y: {
+                            stacked: true,
+                             grid: { display: false },
+                             border: { display: false }
+                        }
+                    },
+                    plugins: {
+                        ...chartTooltipCallback.plugins,
+                        title: {
+                            display: true,
+                            text: '用途別AI評価スコア（イメージ）',
+                            font: { size: 16 }
+                        }
+                    }
+                }
+            });
+        }
+
+        const roiCtx = document.getElementById('roiChart');
+        if (roiCtx) {
+            new Chart(roiCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['資料作成・ルーティンワーク'],
+                    datasets: [
+                        {
+                            label: '従来の時間：企画・リサーチ',
+                            data: [40],
+                            backgroundColor: '#FF6384',
+                            stack: '従来'
+                        },
+                        {
+                            label: '従来の時間：作業・校正',
+                            data: [50],
+                            backgroundColor: '#FF9F40',
+                            stack: '従来'
+                        },
+                        {
+                            label: '従来の時間：デザイン・公開',
+                            data: [10],
+                            backgroundColor: '#FFCD56',
+                            stack: '従来'
+                        },
+                        {
+                            label: 'DXプラン導入後',
+                            data: [10],
+                            backgroundColor: brilliantBlues.medium,
+                            stack: '導入後'
+                        }
+                    ]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                     scales: {
+                        x: {
+                            max: 100,
+                            ticks: {
+                                callback: function(value) {
+                                    return value + '%'
+                                }
+                            },
+                             title: {
+                                display: true,
+                                text: '総作業時間に占める割合'
+                            }
+                        },
+                        y: {
+                            ticks: {
+                                display: false
+                            }
+                        }
+                    },
+                    plugins: {
+                       ...chartTooltipCallback.plugins,
+                        title: {
+                            display: true,
+                            text: '作業時間の比較',
+                             font: { size: 16 }
+                        },
+                        tooltip: {
+                             callbacks: {
+                                title: function(tooltipItems) {
+                                    return tooltipItems[0].dataset.label;
+                                },
+                                label: function(context) {
+                                    return `作業割合: ${context.raw}%`;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+    </script>
+</body>
+</html>
